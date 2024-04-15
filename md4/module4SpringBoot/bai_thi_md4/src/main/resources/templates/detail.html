@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Question info</title>
+</head>
+<body>
+<span th:text="${question.id}"></span><br>
+<span th:text="${question.title}"></span><br>
+<span th:text="${question.content}"></span><br>
+<span th:text="${question.localDate}"></span><br>
+<span th:text="${question.status}"></span><br>
+<span th:text="${question.type.name}"></span>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <title>Tan1</title>
+</head>
+<body>
+<h1 style="text-align: center">Create new Stadium</h1>
+<p style="color: red" th:text="${mess}"></p>
+<form method="post" th:object="${stadium}" th:action="@{/stadiums/create}" >
+  <input type="text" class="form-control" hidden th:field="*{id}">
+  <div class="form-group">
+    <label>Tên</label>
+    <input type="text" class="form-control" th:field="*{name}">
+    <small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors ="*{name}"></small><br>
+  </div>
+  <div class="form-group">
+    <label for="1">Địa chỉ</label>
+    <input type="text" class="form-control" id="1" th:field="*{address}">
+    <small style="color: red" th:if="${#fields.hasErrors('address')}" th:errors ="*{address}"></small><br>
+  </div>
+  <div class="form-group">
+    <label>Khu Vực</label>
+    <select th:field="*{khuVuc.id}">
+      <option th:each="area : ${areas}" th:value="${area.id}"
+              th:text="${area.name_khu_vuc}">
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Loại Sân</label>
+    <select th:field="*{loaiSan.id}">
+      <option th:each="typee : ${type}" th:value="${typee.id}"
+              th:text="${typee.name}">
+      </option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label>Khung Giờ Cho Thuê</label>
+    <select th:field="*{khungGio.id}" onchange="my()" id="hour">
+      <option th:each="hour : ${hours}" th:value="${hour.id}"
+              th:text="${hour.name}">
+      </option>
+      <p id="demo"></p>
+    </select>
+  </div>
+  <!--    <div class="form-group">-->
+  <!--        <label for="1">Giá Tiền</label>-->
+  <!--        <span th:switch="*{khungGio.id}">-->
+  <!--                <span th:each="hour : ${hours}" th:if="${hour.id == stadium.khungGio.id} "-->
+  <!--                      th:text="${hour.cost}"></span>-->
+  <!--            </span>-->
+  <!--    </div>-->
+  <button type="submit" class="btn btn-success">Submit</button>
+  <a href="/stadiums" class="btn btn-primary">Cancel</a>
+</form>
+</body>
+<script>
+  // function my(){
+  //     var x = document.getElementById("hour").value;
+  //     document.getElementById("demo").innerHTML = "cost : " + x;
+  // }
+</script>
+</html>

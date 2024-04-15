@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "name": "IP111111",
+      "quantity": 10,
+      "description": "typicode",
+      "category": 1,
+      "price": 10000,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "IP2",
+      "quantity": 6,
+      "description": "typicode",
+      "category": 1,
+      "price": 10001
+    },
+    {
+      "id": 3,
+      "name": "Android1",
+      "quantity": 8,
+      "description": "typicode",
+      "category": 2,
+      "price": 10002
+    },
+    {
+      "id": 4,
+      "name": "Xiaomi1",
+      "quantity": 10,
+      "description": "typicode",
+      "category": 3,
+      "price": 10003
+    },
+    {
+      "name": "Xiaomi2",
+      "quantity": 11,
+      "description": "edited",
+      "category": 3,
+      "price": 10006,
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "IPhone 17",
+      "quantity": 0,
+      "description": "new",
+      "category": 0,
+      "price": 0
+    },
+    {
+      "id": 7,
+      "name": "IPhone 1111",
+      "quantity": 0,
+      "description": "new",
+      "category": 0,
+      "price": 0
+    }
+  ]
+}

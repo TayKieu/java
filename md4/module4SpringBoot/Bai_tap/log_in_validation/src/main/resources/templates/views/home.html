@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${userDto}" th:action="@{/user/checkValidate}" method="post">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><label>
+                <input th:field="${userDto.name}">
+            </label></td>
+            <td><small style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="${userDto.name}"></small></td>
+        <tr>
+            <td>Age</td>
+            <td><label>
+                <input th:field="${userDto.age}">
+            </label></td>
+            <td><small style="color: red" th:if="${#fields.hasErrors('age')}" th:errors="${userDto.age}"></small></td>
+            <
+
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><label>
+                <input th:field="${userDto.email}">
+            </label></td>
+            <td><small style="color: red" th:if="${#fields.hasErrors('email')}" th:errors="${userDto.email}"></small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

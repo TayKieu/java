@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+    Page Content
+    <section layout:fragment="body" class="py-5">
+        <div class="container px-5 my-5">
+            <form action="/club">
+                <input name="searchName" th:value="${searchName}" placeholder="Input title">
+<!--                <select name="searchCategory" th:value="">-->
+<!--                    <option value="">Select category</option>-->
+<!--                    <option th:each="category: ${categories}"-->
+<!--                            th:value="${category.id}"-->
+<!--                            th:text="${category.categoryName}"></option>-->
+<!--                </select>-->
+                <button>Search</button>
+            </form>
+            <div class="row gx-5">
+                <div th:if="${message}" role="alert">
+                    <span th:text="${#message}"></span>
+                </div>
+                <table style="border: solid black">
+                    <tr>
+                        <th>STT</th>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Content</th>
+                        <th>Photo</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr th:each="club,status: ${clubPage}">
+                        <td th:text="${status.count}"></td>
+                        <td th:text="${club.id}"></td>
+                        <td th:text="${club.title}"></td>
+                        <td th:text="${club.content}"></td>
+                        <td><img class="img-fluid rounded-3 mb-3" th:src="@{${__club.photoUrl__}}" alt="..."/></td>
+                        <td><a class="btn btn-primary" th:href="@{/club/{clubId}/edit(clubId=${club.id})}">Edit</a></td>
+                        <td><a class="btn btn-danger" th:href="@{/club/{clubId}/delete(clubId=${club.id})}">Delete</a>
+                        </td>
+                        <td>
+                            <a th:href="@{/club/detail/{clubId}(clubId=${club.id})}">Detail</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td th:if="${clubPage.totalPages==0}" colspan="8">Danh sach trong</td>
+                    </tr>
+                </table>
+                <a th:if="${clubPage.hasPrevious()}"
+                   th:href="@{/club(page =${clubPage.number -1},searchName=${searchName})}">Previous</a>
+                <span th:text="${clubPage.number+1}"></span>/
+                <span th:text="${clubPage.totalPages}"></span>
+                <a th:if="${clubPage.hasNext()}"
+                   th:href="@{/club(page =${clubPage.number+1},searchName=${searchName})}">Next</a>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

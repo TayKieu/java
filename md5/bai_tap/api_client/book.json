@@ -1,0 +1,40 @@
+{
+  "books": {
+    "page": 3,
+    "per_page": 2,
+    "total": 6,
+    "total_page": 3,
+    "data": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "quantity": "123333"
+      },
+      {
+        "id": 2,
+        "title": "adsafsdf",
+        "quantity": 0
+      },
+      {
+        "id": 3,
+        "title": "adsafsdf",
+        "quantity": 0
+      },
+      {
+        "id": 4,
+        "title": "adsafsdf",
+        "quantity": 0
+      },
+      {
+        "id": 5,
+        "title": "adsafsdf",
+        "quantity": 0
+      },
+      {
+        "id": 6,
+        "title": "adsafsdf",
+        "quantity": 0
+      }
+    ]
+  }
+}

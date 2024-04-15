@@ -1,0 +1,14 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Thực pẩm chức năng",
+      "description": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "Thiết bị y tế",
+      "description": "typicode"
+    }
+  ]
+}

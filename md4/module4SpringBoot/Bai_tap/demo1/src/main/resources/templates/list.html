@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div th:insert="~{layout::head1}">
+
+</div>
+<form action="/blog">
+    <input name="searchName"  th:value="${searchName}" placeholder="Nhập tên">
+    <button>Search</button>
+</form>
+<a href="/blog/create">Thêm mới</a>
+<table border="1" style="border-collapse: collapse;">
+    <tr>
+        <th>STT</th>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Image</th>
+        <th>Create on: </th>
+
+    </tr>
+    <tr th:each="blog,status: ${blogPage}">
+        <td th:text="${status.count}"></td>
+        <td th:text="${blog.id}"></td>
+        <td th:text="${blog.title}"></td>
+        <td th:text="${blog.content}"></td>
+        <td>
+            <a th:href="@{/blog/detail(id=${blog.id})}">
+                <div class="blog-img">
+                <img th:src="@{${blog.imgUrl}}" />
+            </div>
+            </a>
+        <td th:text="${blog.date}"></td>
+    </tr>
+    <tr>
+        <td th:if="${blogPage.totalPages==0}"colspan="8">
+            Danh sách trống
+        </td>
+    </tr>
+</table>
+
+<a th:if="${blogPage.hasPrevious()}" th:href="@{/blog(page =${blogPage.number - 1},searchName=${searchName})}">Previous</a>
+<span th:text="${blogPage.number+1}"></span>/
+<span th:text="${blogPage.totalPages}"></span>
+<a th:if="${blogPage.hasNext()}" th:href="@{/blog(page =${blogPage.number + 1},searchName=${searchName})}">Next</a>
+
+
+
+
+<div th:replace="~{layout::foot}"></div>
+</body>
+</html>

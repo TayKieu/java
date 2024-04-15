@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <link th:href="@{/css/bootstrap.css}" rel="stylesheet">
+</head>
+<body>
+<form method="get" th:action="@{/question}">
+  <input type="text" placeholder="input name here" name="searchName" th:value="${title}">
+  <select name="typeId">
+    <option value="">--</option>
+    <option th:each="type : ${types}" th:value="${type.id}" th:text="${type.name}">
+    </option>
+  </select>
+  <button type="submit">search</button>
+</form>
+<a class="btn btn-info" href="/question/create">Create</a>
+<div th:if="${#messages}" role="alert">
+  <span th:text="${#messages}"></span>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th>STT</th>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Type</th>
+    <th>Date</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  <tr th:each="question,status: ${questionPage}">
+    <td th:text="${status.count}"></td>
+    <td th:text="${question.id}"></td>
+    <td th:text="${question.title}"></td>
+    <td th:text="${question.type.name}"></td>
+    <td th:text="${question.localDate}"></td>
+    <td th:text="${question.status}"></td>
+    <td><a class="btn btn-primary" th:href="@{/question/{questionId}/{typeId}/edit(questionId=${question.id},typeId=${question.type.id})}">Edit</a></td>
+    <td><a class="btn btn-danger" th:href="@{/question/{questionId}/delete(questionId=${question.id})}">Delete</a>
+    </td>
+    <td>
+      <a th:href="@{/question/detail/{questionId}(questionId=${question.id})}">Detail</a>
+    </td>
+  </tr>
+  <tr>
+    <td th:if="${questionPage.totalPages==0}" colspan="8">Empty</td>
+  </tr>
+</table>
+<a th:if="${questionPage.hasPrevious()}"
+   th:href="@{/question(page =${questionPage.number -1},searchName=${title},typeId=${typeId})}">Previous</a>
+<span th:text="${questionPage.number+1}"></span>/
+<span th:text="${questionPage.totalPages}"></span>
+<a th:if="${questionPage.hasNext()}"
+   th:href="@{/question(page =${questionPage.number+1},searchName=${title},typeId=${typeId})}">Next</a>
+</body>
+</html>

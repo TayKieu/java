@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "PROD-0001",
+      "name": "SP1",
+      "quantity": 10,
+      "description": "typicode",
+      "category": 1,
+      "price": 10000,
+      "date": "2023-10-24"
+    },
+    {
+      "id": "PROD-0002",
+      "name": "SP2",
+      "quantity": 10,
+      "description": "typicode",
+      "category": 2,
+      "price": 10000,
+      "date": "2023-10-24"
+    },
+    {
+      "id": "PROD-0003",
+      "name": "SP3",
+      "quantity": 10,
+      "description": "typicode",
+      "category": 1,
+      "price": 10000,
+      "date": "2023-10-24"
+    },
+    {
+      "id": "PROD-0004",
+      "name": "SP4",
+      "quantity": 10,
+      "description": "typicode",
+      "category": 2,
+      "price": 10000,
+      "date": "2023-10-24"
+    },
+    {
+      "id": "PROD-1113",
+      "name": "SP7",
+      "quantity": "123",
+      "description": "new",
+      "category": "1",
+      "price": "123123",
+      "date": "2023-10-17"
+    },
+    {
+      "id": "PROD-1111",
+      "name": "IPhone 13",
+      "quantity": 1,
+      "description": "new",
+      "category": "1",
+      "price": "12",
+      "date": "2023-10-17"
+    }
+  ]
+}
