@@ -1,0 +1,59 @@
+
+`	java:S112H"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112J"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+`	java:S112o"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Œ"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112˜"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112¡"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ò"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ô"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112Ù"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112â"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112ï"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112ş"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+a	java:S112‡"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ
+e
+java:S1192°"IDefine a constant instead of duplicating this literal "home.jsp" 3 times.(®ş¡Ôøÿÿÿÿ
+c
+java:S1192^"HDefine a constant instead of duplicating this literal "message" 7 times.(ø¦Îçşÿÿÿÿ
+f
+java:S1192³"JDefine a constant instead of duplicating this literal "login.jsp" 4 times.(‹òÊûÿÿÿÿ
+g
+java:S1301½"KReplace this "switch" statement by "if" statements to increase readability.(ë´åİşÿÿÿÿ
+e
+java:S1989("OHandle the following exception that could be thrown by "download": IOException.(™Ç´²
+j
+java:S19891"THandle the following exception that could be thrown by "showLoginForm": IOException.(ã¥”ğ
+H
+java:S1135="2Complete the task associated to this TODO comment.(‡ñÅ¼
+Z
+java:S2147I"DCombine this catch with the one at line 71, which has the same body.(ï­£Ä
+H
+java:S1135V"2Complete the task associated to this TODO comment.(‡ñÅ¼
+h	java:S100s"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Í±ïáıÿÿÿÿ
+<
+java:S1075t"&Remove this hard-coded path-delimiter.(›é¢ç
+I
+java:S1135€"2Complete the task associated to this TODO comment.(‡ñÅ¼
+]
+java:S1989Œ"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ
+]
+java:S1989˜"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ
+@
+java:S1940Ÿ")Use the opposite operator ("==") instead.(Áêóç
+]
+java:S1989¡"AHandle the "RuntimeException" thrown here in a "try/catch" block.(Ò‚Òéüÿÿÿÿ
+h
+java:S1989£"LHandle the following exception that could be thrown by "write": IOException.(÷Ö¬Ğúÿÿÿÿ
+h
+java:S1989¦"LHandle the following exception that could be thrown by "close": IOException.(¶ò†Áşÿÿÿÿ
+c
+java:S1989§"LHandle the following exception that could be thrown by "close": IOException.(®ø§ä
+=	java:S131½""Add a default case to this switch.(ë´åİşÿÿÿÿ
+\
+java:S2147Ó"ECombine this catch with the one at line 209, which has the same body.(À–„Å
+Q
+java:S2441ö":Make "User" serializable or don't store it in the session.(úÆè“
+R	java:S125ô"<This block of commented-out lines of code should be removed.(õ‡•
+R	java:S125÷"<This block of commented-out lines of code should be removed.(Õ¯Ìî
+R	java:S125û"<This block of commented-out lines of code should be removed.(Âÿ¨¢
